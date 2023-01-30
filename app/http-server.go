@@ -31,17 +31,17 @@ func (p *httpServer) Start() (err error) {
 		Handler:           routers.Router,
 		ReadHeaderTimeout: 5 * time.Second,
 	}
-	http.HandleFunc("/", homeHandler)
-	http.HandleFunc("/status", myHandler)
-	http.HandleFunc("/ffmpeg", ffmpegHandler)
+	//http.HandleFunc("/", homeHandler)
+	//http.HandleFunc("/status", myHandler)
+	//http.HandleFunc("/ffmpeg", ffmpegHandler)
 	link := fmt.Sprintf("http://%s:%d", mytool.LocalIP(), p.httpPort)
 	log.Println("Start http server -->", link)
-	go func() {
-		if err := p.httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			log.Println("Start http server error", err)
-		}
-		log.Println("Start http server end")
-	}()
+	//go func() {
+	if err := p.httpServer.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		log.Println("Start http server error", err)
+	}
+	log.Println("Start http server end")
+	//}()
 	return
 }
 

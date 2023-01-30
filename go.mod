@@ -19,7 +19,9 @@ require (
 	github.com/lestrrat-go/strftime v1.0.6 // indirect
 	github.com/onsi/ginkgo v1.16.5 // indirect
 	github.com/onsi/gomega v1.26.0 // indirect
+	github.com/stretchr/testify v1.8.1
 	github.com/teris-io/shortid v0.0.0-20220617161101-71ec9f2aa569
+	github.com/u2takey/go-utils v0.3.1
 	golang.org/x/sys v0.4.0
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2
