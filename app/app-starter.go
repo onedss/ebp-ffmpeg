@@ -29,7 +29,7 @@ func StartApp() {
 	}
 	if len(os.Args) > 1 {
 		if os.Args[1] == "install" || os.Args[1] == "stop" {
-			figure.NewFigure("Ebp-Proxy", "", false).Print()
+			figure.NewFigure("Ebp-FFmpeg", "", false).Print()
 		}
 		log.Println(svcConfig.Name, os.Args[1], "...")
 		if err = service.Control(s, os.Args[1]); err != nil {
@@ -39,7 +39,7 @@ func StartApp() {
 		log.Println(svcConfig.Name, os.Args[1], "ok")
 		return
 	}
-	figure.NewFigure("Ebp-Proxy", "", false).Print()
+	figure.NewFigure("Ebp-FFmpeg", "", false).Print()
 	if err = s.Run(); err != nil {
 		log.Println(err)
 		mytool.PauseExit()

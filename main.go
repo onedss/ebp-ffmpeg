@@ -14,7 +14,7 @@ var (
 )
 
 func main() {
-	log.SetPrefix("[Ebp-Proxy] ")
+	log.SetPrefix("[Ebp-FFmpeg] ")
 	if mytool.Debug {
 		log.SetFlags(log.Lshortfile | log.Ldate | log.Lmicroseconds)
 	} else {
