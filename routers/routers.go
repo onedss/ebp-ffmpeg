@@ -82,7 +82,7 @@ func Init() (err error) {
 
 	store := sessions.NewGormStoreWithOptions(db.SQLite, sessions.GormStoreOptions{
 		TableName: "t_sessions",
-	}, []byte("EbpProxy@2018"))
+	}, []byte("EbpFFmpeg@2018"))
 	store.Options(sessions.Options{HttpOnly: true, MaxAge: tokenTimeout, Path: "/"})
 	sessionHandle := sessions.Sessions("token", store)
 
@@ -95,7 +95,7 @@ func Init() (err error) {
 	{
 		api := Router.Group("/api/v1").Use(sessionHandle)
 		api.GET("/restart", API.Restart)
-		//api.GET("/convert2mp3", API.Convert2MP3)
+		api.GET("/convert2mp3", API.Convert2MP3)
 	}
 	return
 }
